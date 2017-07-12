@@ -14,9 +14,12 @@
  <body>
  <header>
  	<?php
- 	
+ 	//variable super global GET
+ 	// http: mini-framework.com/saludo=Hola&nombre=xochitl&edad=27 
  	//este es un cometario
- 	$saludo = "hola mundo";
+ 	$saludo = $_GET['saludo'];
+ 	$nombre = $_GET['nombre'];
+ 	$edad = $_GET['edad'];
 
  	?>
  	<h1> 
@@ -24,15 +27,10 @@
  	
  	//echo 'Este es un saludo: $saludo' no imprime el valor del saludo
  	 
- 	 echo saludo; 
- 	 echo "Este es un saludo: $saludo";
- 	 
- 	 //concatenar variables
- 	 echo 'Este es otro saludo:' . $saludo;
+ 	 echo $saludo; . "" . $nombre; ?> 
+ 	 <br>
+ 	 <?php echo $edad; ?>
 
- 	 //forma explicita de imprimir la variable
-
- 	 echo"imprimiendo saludo: {$saludo}";
  	 ?>
  		
  	</h1>

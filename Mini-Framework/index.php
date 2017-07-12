@@ -23,15 +23,15 @@
 
  	?>
  	<h1> 
- 	<? php
+ 	<?php
  	
  	//echo 'Este es un saludo: $saludo' no imprime el valor del saludo
+
+ 	// http://www.mini-framework.com/?nombre=Ale&saludo=Hola&edad=20
  	 
- 	 echo $saludo; . "" . $nombre; ?> 
+ 	 echo $saludo . " " . $nombre; ?> 
  	 <br>
  	 <?php echo $edad; ?>
-
- 	 ?>
  		
  	</h1>
  </header>

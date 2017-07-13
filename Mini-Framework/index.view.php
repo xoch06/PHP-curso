@@ -11,36 +11,42 @@
  } 
  
      </style>
- }
+ 
  </head>
  <body>
  
  <header>
  
- <h1>Arreglos</h1>
+ <h1>Arreglos Asociativos</h1>
  
  </header>
     
     <main>
- 
-<h2> Nombres: </h2>
-<ul>    
-    <?php foreach($nombres as $nombre){ ?>
-    <li> <?= $nombre ?> </li>
+    <?php foreach ($persona as $llave => $valor) { ?>
+    <p><?= $llave . ":" . $valor; ?></p>
+    
     <?php } ?>
-        </ul>
-        
-        <h2> Animales </h2>
-        
-        <ol>    
-    <?php foreach ($animales as $animal): ?>
-    <li> <?= $animal ?> </li>
-    <?php endforeach;?>
-        </ol>
-        <p><? $dato; ?> </p>
-        <p> ¿Existe Alejandro? <? = $respuesta; ?> </p>
 
-        </main>
+    <!--ayuda a dar formato visual para debuggear-->
+
+    <pre>
+    <?php var_dump ($tareas); ?>
+    </pre>
+    <h1> Tareas </h1>
+
+    <ul>
+    <?php foreach ($tareas as $tarea) { ?>
+    <li> 
+    <p>Tarea: <?= $tarea["Tarea"]; ?></p>
+     <p>Asignado: <?= $tarea["Asignado"]; ?></p>
+
+    </li>
+    <?php } ?>
+   
+    </ul>
+
+
+     </main>
     
     <footer>
         

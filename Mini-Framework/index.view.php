@@ -22,11 +22,11 @@
  </header>
     
     <main>
-            <h2>Tareas</h2>
+            <h2>Tareas realizadas</h2>
             <ul>
             <!--continue: cuando la condición se cumpla seguirá  -->
             <?php foreach ($tareas as $tarea): ?>
-                <?php  if ($tarea['completado'] === true) continue; ?>
+                <?php  if ($tarea['completado'] !== true) continue; ?>
                 <li>
 
                     Tarea: <?= $tarea['tarea'] ; ?> <br>
@@ -34,16 +34,34 @@
                     Fecha: <?= $tarea['fecha'] ; ?> <br>
                     Completado: 
         <!-- Operador Ternario-->
-         <?= ($tarea['completado'] === true )  ? 'Tarea realizada' : 'Tarea no realizada'; ?>
+         <?= ($tarea['completado'] !== true )  ? 'Tarea realizada' : 'Tarea no realizada'; ?>
         
               
             </li>
+ <?php endforeach; ?>
+            
             </ul>
+             
+             <h2>Tareas no realizadas</h2>
+            <ul>
+            <!--continue: cuando la condición se cumpla seguirá  -->
+            <?php foreach ($tareas as $tarea): ?>
+                <?php  if ($tarea['completado'] !== false) continue; ?>
+                <li>
+
+                    Tarea: <?= $tarea['tarea'] ; ?> <br>
+                    Asignado: <?= $tarea['asignado'] ; ?> <br>
+                    Fecha: <?= $tarea['fecha'] ; ?> <br>
+                    Completado: 
+        <!-- Operador Ternario-->
+         <?= ($tarea['completado'] !== false )  ? 'Tarea realizada' : 'Tarea no realizada'; ?>
+        
+              
+            </li>
         
         <?php endforeach; ?>
         
-
-</ul>
+        </ul>
 
 </main>
     

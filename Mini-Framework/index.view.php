@@ -17,36 +17,35 @@
  
  <header>
  
- <h1>Arreglos Asociativos</h1>
+ <h1>Condicionales</h1>
  
  </header>
     
     <main>
-    <?php foreach ($persona as $llave => $valor) { ?>
-    <p><?= $llave . ":" . $valor; ?></p>
-    
-    <?php } ?>
+            <h2>Tareas</h2>
+            <ul>
+            
+            <?php foreach ($tareas as $tarea): ?>
+                <li>
 
-    <!--ayuda a dar formato visual para debuggear-->
+                    Tarea: <?= $tarea['tarea'] ; ?> <br>
+                    Asignado: <?= $tarea['asignado'] ; ?> <br>
+                    Fecha: <?= $tarea['fecha'] ; ?> <br>
+                    Completado: 
+         <?php if ($tarea['completado'] == true ) : ?>  
+            Tarea realizada
+        <?php elseif ($tarea['completado'] === false): ?>
+              Tarea incompleta
+        <?php  else:  ?>
+            No tiene valor asignado
+        <?php endif; ?> 
+        
+        </li>
+    <?php endforeach; ?>
+        
+</ul>
 
-    <pre>
-    <?php var_dump ($tareas); ?>
-    </pre>
-    <h1> Tareas </h1>
-
-    <ul>
-    <?php foreach ($tareas as $tarea) { ?>
-    <li> 
-    <p>Tarea: <?= $tarea["Tarea"]; ?></p>
-     <p>Asignado: <?= $tarea["Asignado"]; ?></p>
-
-    </li>
-    <?php } ?>
-   
-    </ul>
-
-
-     </main>
+</main>
     
     <footer>
         

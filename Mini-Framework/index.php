@@ -1,38 +1,16 @@
 
  	<?php
- 	//Arreglos Asociativos
- 	//funcionan con dato llave- valor
+ require 'functions.php';
+ 
+$tarea = array(
+	'nombre' => 'Tarea 1',
+	 'fecha' => '25 jul 2017'
+	 );
 
- 	
-		
-		$tarea1 = array(
-			'tarea' =>'Revisar el codigo',
-			'asignado' =>'Alejandro',
-			'fecha' =>'25 de jul 2017',
-			'completado' => false 
-			);
+$resultado = suma (5,10);
+echo $resultado;
 
-		$tarea2 = array(
-			'tarea' =>'Revisar el codigo',
-			'asignado' =>'Luis',
-			'fecha' =>'30 de jul 2017', 
-			'completado'=> true
-			);
-
-		$tareas = array(
-			$tarea1,
-			$tarea2,
-			array(
-
-			'tarea' =>'Subir el codigo',
-			'asignado' =>'David',
-			'fecha' =>'31 de jul 2017',
-			'completado' => false 
-			)
-			);
-
-
-
+dd($tarea);
 
  require 'index.view.php';
 

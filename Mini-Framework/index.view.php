@@ -24,25 +24,25 @@
     <main>
             <h2>Tareas</h2>
             <ul>
-            
+            <!--continue: cuando la condición se cumpla seguirá  -->
             <?php foreach ($tareas as $tarea): ?>
+                <?php  if ($tarea['completado'] === true) continue; ?>
                 <li>
 
                     Tarea: <?= $tarea['tarea'] ; ?> <br>
                     Asignado: <?= $tarea['asignado'] ; ?> <br>
                     Fecha: <?= $tarea['fecha'] ; ?> <br>
                     Completado: 
-         <?php if ($tarea['completado'] == true ) : ?>  
-            Tarea realizada
-        <?php elseif ($tarea['completado'] === false): ?>
-              Tarea incompleta
-        <?php  else:  ?>
-            No tiene valor asignado
-        <?php endif; ?> 
+        <!-- Operador Ternario-->
+         <?= ($tarea['completado'] === true )  ? 'Tarea realizada' : 'Tarea no realizada'; ?>
         
-        </li>
-    <?php endforeach; ?>
+              
+            </li>
+            </ul>
         
+        <?php endforeach; ?>
+        
+
 </ul>
 
 </main>

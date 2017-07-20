@@ -1,66 +1,48 @@
 
  	<?php
  require 'functions.php';
+ require 'Tarea.php';
  
 
  //$pdo = connectDB();
 
  //$tareas =ListaTareasCompletadas ($pdo);
- class Tarea {
- 	//Variables- Atributos
- 	public $id = 5;
- 	public $descripcion = 'esta es una tarea';
- 	public $asignado = 'Xochitl';
- 	public $completado = 0;
- 	public $fecha = '2017-08-20';
- 
- //Funciones- Metodos
 
- 	public function verAsignado()
- 	{
- 		echo "El asignado es:" . $this-> asignado;
-    }
-
-    public function setDescripcion($valor)
-     {
-    	$this->descripcion = $valor;
-   	 }
-
-    public function getDescription()
-    	{
-        return $this->decripcion;
-    	}
-
-    public function setAsignado($valor
-    {
-         $this->asignado = $valor;
-    }
-   public function getAsignado()
-    	{
-        return $this->asignado;
-    	}
-
-      }
 //crea objetos
 $tarea1 = new Tarea();
 $tarea2 = new Tarea();
  
  //asignamos sus datos
 
-echo $tarea1->getDescripcion . "<br>";
-echo $tarea2->getDescripcion .   "<br>";
-     
 //$tarea1->descripcion = "Ir al supermercado";
-
+$tarea1->setId("1");
 $tarea1->setDescripcion("Ir al supermercado");
-$tarea2->setDescripcion("Comprar pan");
+$tarea1->setAsignado("Xochitl");
+$tarea1->setCompletado("1");
+$tarea1->setFecha("2017-07-30");
 
-  
-echo $tarea1->getDescripcion . "<br>";
-echo $tarea2->getDescripcion;    
 
-$tarea1->setAsignado("xochitl");
-$tarea2->setAsignado("Luis");
+$tarea2->setId("2");
+$tarea2->setDescripcion("Ir a la plaza");
+$tarea2->setAsignado("Diego");
+$tarea2->setCompletado("0");
+$tarea2->setFecha("2017-08-2");
+
+
+
+echo $tarea1->getId() . "<br>" ;
+echo $tarea1->getDescripcion() . "<br>";
+echo $tarea1->getAsignado() . "<br>";
+echo $tarea1->getCompletado() . "<br>";
+echo $tarea1->getFecha() . "<br>";
+
+echo $tarea2->getId() . "<br>" ;
+echo $tarea2->getDescripcion() . "<br>";
+echo $tarea2->getAsignado() . "<br>";
+echo $tarea2->getCompletado() . "<br>";
+echo $tarea2->getFecha() . "<br>";
+
+
 
 
 

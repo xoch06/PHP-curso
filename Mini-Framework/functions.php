@@ -40,7 +40,7 @@ function ListaTareasCompletadas($base)
 
 $sentencia = $base->prepare('SELECT * FROM tarea WHERE completado = 1');
 $sentencia-> execute();
-$tareas = $sentencia-> fetchAll(PDO::FETCH_OBJ);
+$tareas = $sentencia-> fetchAll();
 return $tareas;
 }
  

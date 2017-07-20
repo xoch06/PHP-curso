@@ -25,10 +25,7 @@
     <ul>
     <?php foreach ($tareas as $tarea): ?>
         <li>
-        <?= $tarea['descripcion']; ?>
-        <?= $tarea['asignado']; ?>
-        <?= $tarea['fecha']; ?>
-        <?= $tarea['completado']; ?>
+        <?= $tarea->descripcion; ?>
         
         </li>
     <?php endforeach; ?>

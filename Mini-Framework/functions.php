@@ -30,7 +30,7 @@ function ListaTareas($base)
 
 $sentencia = $base->prepare('SELECT * FROM tarea');
 $sentencia-> execute();
-$tareas = $sentencia-> fetchAll(PDO::FETCH_OBJ);
+$tareas = $sentencia-> fetchAll(PDO::FETCH_CLASS, 'Tarea');
 return $tareas;
 }
 

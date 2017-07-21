@@ -1,12 +1,24 @@
 <?php
 class Tarea {
  	//Variables- Atributos
- 	public $id = 5;
- 	public $descripcion = 'esta es una tarea';
- 	public $asignado = 'Xochitl';
- 	public $completado = 0;
- 	public $fecha = '2017-08-20';
- 
+ 	private $id = 5;
+ 	private $descripcion = 'esta es una tarea';
+ 	private $asignado = 'Xochitl';
+ 	private $completado = 0;
+ 	private $fecha = '2017-08-20';
+
+    
+ 	//constructor
+ 	public function __construct($id, $descripcion, $asignado, $completado, $fecha)
+    {
+      $this->id = $id;
+      $this->descripcion = $descripcion;
+      $this->$asignado = $asignado;
+      $this->completado = $completado;
+      $this->fecha = $fecha;
+
+
+    }
  //Funciones- Metodos
 
  	public function verAsignado()

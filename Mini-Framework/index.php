@@ -9,17 +9,17 @@
  //$tareas =ListaTareasCompletadas ($pdo);
 
 //crea objetos
-$tarea1 = new Tarea();
-$tarea2 = new Tarea();
+$tarea1 = new Tarea(1, "Ir al supermercado", "xochitl",1, "2017/07/30");
+$tarea2 = new Tarea(2, "Ir a la plaza", "Diego" , 0, "2017/08/2");
  
  //asignamos sus datos
 
 //$tarea1->descripcion = "Ir al supermercado";
-$tarea1->setId("1");
-$tarea1->setDescripcion("Ir al supermercado");
-$tarea1->setAsignado("Xochitl");
-$tarea1->setCompletado("1");
-$tarea1->setFecha("2017-07-30");
+//$tarea1->setId("1");
+//$tarea1->setDescripcion("Ir al supermercado");
+//$tarea1->setAsignado("Xochitl");
+//$tarea1->setCompletado("1");
+//$tarea1->setFecha("2017-07-30");
 
 
 $tarea2->setId("2");
@@ -41,9 +41,6 @@ echo $tarea2->getDescripcion() . "<br>";
 echo $tarea2->getAsignado() . "<br>";
 echo $tarea2->getCompletado() . "<br>";
 echo $tarea2->getFecha() . "<br>";
-
-
-
 
 
 

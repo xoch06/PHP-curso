@@ -39,8 +39,15 @@ function ListaTareasCompletadas($base)
  {
 
 $sentencia = $base->prepare('SELECT * FROM tarea WHERE completado = 1');
-$sentencia-> execute();
-$tareas = $sentencia-> fetchAll();
+$sentencia->execute();
+$tareas = $sentencia-> fetchAll(PDO::FETCH_CLASS, 'Tarea');
 return $tareas;
 }
  
+function ListaAsignados($base)
+{
+ $sentencia = $base->prepare('SELECT * FROM asignado');
+ $sentencia->execute();
+ $asignados = $sentencia->fetchAll(PDO::FETCH_CLASS,'Asignado');
+ return $asignados;
+}

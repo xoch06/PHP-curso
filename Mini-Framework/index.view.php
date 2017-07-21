@@ -25,13 +25,22 @@
     <ul>
     <?php foreach ($tareas as $tarea): ?>
         <li>
-        <?= $tarea->descripcion; ?>
+        <?= $tarea->getDescripcion(); ?>
         
         </li>
     <?php endforeach; ?>
-        <?
     </ul>
 
+<ul>
+    <?php foreach ($asignados as $asignado): ?>
+        <li>
+        <?= $asignado->getId(); ?>
+        <?= $asignado->getNombre(); ?>
+        <?= $asignado->getPuesto(); ?>
+        
+        </li>
+    <?php endforeach; ?>
+    </ul>
 
 
 

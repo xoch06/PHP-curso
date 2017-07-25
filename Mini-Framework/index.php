@@ -1,16 +1,8 @@
+<?php
 
- 	<?php
- require 'functions.php';
- require 'Tarea.php';
- require 'Asignado.php';
-
- $pdo = connectDB();
-
-
-  $tareas =ListaTareas($pdo);
-   
-   
-$asignados =ListaAsignados($pdo);
+ $query = require 'bootstrap.php';
+ $tareas = $query->selectAll('tarea', 'Tarea');
+ $asignados = $query->selectAll('asignado', 'Asignado');
 
 
 

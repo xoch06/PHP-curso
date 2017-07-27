@@ -2,13 +2,16 @@
  require 'database/Connection.php';
  require 'database/QueryBuilder.php';
  require 'Router.php';
+ require 'Request.php';
  require  __DIR__ . '/../functions.php';
  require  __DIR__ . '/../Tarea.php';
  require  __DIR__ . '/../Asignado.php';
  
-
-
-  $config = require 'config.php';
-   return new QueryBuilder(
- 		Connection::make($config['database'])
+ $app = array();
+ $app['config'] = require 'config.php';
+ $app['db'] = new QueryBuilder(
+ 		Connection::make($app['config']['database'])
  	);
+
+  
+  

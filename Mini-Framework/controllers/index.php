@@ -1,7 +1,7 @@
 <?php
  
- $tareas = $query->selectAll('tarea
+ $tareas = $app['db']->selectAll('tarea
  	', 'Tarea');
- $asignados = $query->selectAll('asignado', 'Asignado');
+ $asignados = $app['db']->selectAll('asignado', 'Asignado');
 
 require __DIR__ . '/../views/index.view.php';

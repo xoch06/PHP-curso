@@ -2,7 +2,7 @@
 
 
 
-<h1>Este es el index</h1>
+<h1>Esto es el acerca de</h1>
 
 
 

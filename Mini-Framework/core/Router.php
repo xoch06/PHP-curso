@@ -2,7 +2,8 @@
 class Router
 {
     private $routes;
- 	public function define($routes)
+    
+    public function define($routes)
   	{
 		$this->routes = $routes;
  	}

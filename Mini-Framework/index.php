@@ -1,13 +1,19 @@
 <?php
 
- $query = require 'bootstrap.php';
- $tareas = $query->selectAll('tarea', 'Tarea');
- $asignados = $query->selectAll('asignado', 'Asignado');
+$query = require 'core/bootstrap.php';
+ 
+require 'routes.php';
+
+$router = new Router();
+
+$router->define($routes);
+
+$uri = $_SERVER['REQUEST_URI'];
+//contacto "/"
+$uri =trim($uri, '/');
 
 
+require $router->direct($uri);
 
-
-
-require 'index.view.php';
 
  	

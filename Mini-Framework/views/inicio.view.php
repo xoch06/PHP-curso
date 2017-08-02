@@ -1,10 +1,16 @@
 <?php require 'partials/head.view.php'; ?>
 
 
-<h1>Este es el index</h1>
+<h1>Usuarios</h1>
+<ul class="collection"> 
+<?php foreach($usuarios as $usuario):?>
+<li class="collection-item"><?= $usuario->nombre; ?></li>
+<?php endforeach; ?>
+
+</ul>
 
 <div class="row">
-	<form class="col s12" method="GET" action="/">
+	<form class="col s12" method="POST" action="/usuario">
 		<div class="row">
         	<div class="input-field col s12">
         		<input id="nombre" name="nombre" type="text" class="validate">

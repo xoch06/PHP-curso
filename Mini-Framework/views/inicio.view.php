@@ -1,6 +1,5 @@
 <?php require 'partials/head.view.php'; ?>
 
-
 <h1>Usuarios</h1>
 <ul class="collection"> 
 <?php foreach($usuarios as $usuario):?>

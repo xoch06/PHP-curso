@@ -1,4 +1,5 @@
 <?php
+
 class Router
 {
     private $routes = array(
@@ -9,8 +10,12 @@ class Router
    public function direct($uri, $method)
  	{
       if (array_key_exists($uri, $this->routes[$method])){
-   	   return $this->routes[$method][$uri];
+   	  
+      $data = explode('@',$this->routes[$method] [$uri]);
+
+       return $this->callAction($data[0], $data[1]);
     }
+   
    throw new Exception("No existe la ruta");
  
  }
@@ -22,6 +27,16 @@ class Router
    public function post($uri, $controller)
    {
    	$this->routes['POST'][$uri] = $controller;
+   }
+
+   private function callAction($controller, $action)
+   {
+     $controller = new $controller;
+     //$controller =new WebController
+     if(method_exists($controller,$action)){
+       return $controller->$action();
+      }
+      throw new Exception("No existe el metodo");
    }
 
 

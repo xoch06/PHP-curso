@@ -6,6 +6,12 @@ class Router
     	'GET' => array(),
     	'POST' => array()
         );
+    public static function load ($file)
+    {
+        $router = new static;
+        require $file;
+        return $router;
+    }
     
    public function direct($uri, $method)
  	{

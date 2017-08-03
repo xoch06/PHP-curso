@@ -2,7 +2,7 @@
 
 
 
-<h1>Aqui esta el contacto</h1>
+<h1>Contacto</h1>
 
 
 

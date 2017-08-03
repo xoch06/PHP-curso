@@ -1,6 +1,4 @@
  <?php
- require  __DIR__ . '/../functions.php';
- 
  
  App::bind('config',require'config.php');
  

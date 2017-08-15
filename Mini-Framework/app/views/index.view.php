@@ -1,6 +1,6 @@
 <?php require 'partials/head.view.php'; ?>
 
-<h1>Inicio</h1>
+<h1><?= $title; ?></h1>
 
 
 

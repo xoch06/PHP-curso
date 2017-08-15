@@ -2,7 +2,7 @@
 
 
 
-<h1>Contacto</h1>
+<h1><?= $title; ?></h1>
 
 
 
